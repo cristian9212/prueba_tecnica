@@ -8,11 +8,12 @@ import org.springframework.stereotype.Service;
 
 import pruebaTecnica.model.dao.IempleadoDao;
 import pruebaTecnica.model.entity.Empleado;
-import pruebaTecnica.model.service.IempleadoService;
+import pruebaTecnica.model.service.IEmpleadoService;
+
 
 
 @Service
-public class EmpleadoServiceImpl implements IempleadoService {
+public class EmpleadoServiceImpl implements IEmpleadoService {
 
 	@Autowired
 	public IempleadoDao empleadoDao;
@@ -28,8 +29,19 @@ public class EmpleadoServiceImpl implements IempleadoService {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
-	
-	
+
+	@Override
+	public Empleado ingresarRegistro(Empleado empleado) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Empleado iniciarSecion(String correo, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
+	
+	
+	

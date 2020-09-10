@@ -27,7 +27,7 @@ public class RolServiceImpl  implements IRolService {
 	}
 
 	@Override
-	public Rol actualizar(Rol rol, int rolId) {
+	public Rol actualizar(Rol rol) {
 		
 		return rolDao.save(rol);
 	}

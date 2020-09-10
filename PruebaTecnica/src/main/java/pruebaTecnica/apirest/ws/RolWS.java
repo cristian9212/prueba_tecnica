@@ -29,8 +29,16 @@ public class RolWS {
 	 */
 	
   @PostMapping("/agregar")
-  public Rol agregarRol(@RequestBody Rol rol) {
+  public String  agregarRol(@RequestBody Rol rol) {
 	  return rolManagerService.insertar(rol);
+  }
+  /**
+   * consultar
+   */
+  
+  @GetMapping("/consultar/{id}")
+  public Rol consultarRol(@PathVariable int id ) {
+	  return rolManagerService.findById(id);
   }
   
   /**
@@ -38,8 +46,8 @@ public class RolWS {
    */
   
   @PutMapping("/actualizar/{id}")
-  public Rol actulizarRol(@RequestBody Rol rol, @PathVariable int rolId) {
-	  return rolManagerService.actualizar(rol,rolId);
+  public Rol actulizarRol(@RequestBody Rol rol, @PathVariable int id) {
+	  return rolManagerService.actualizar(rol);
   }
   /**
    * Lista colaboradores 
@@ -55,8 +63,8 @@ public class RolWS {
   * Eliminacion 
   */
   @DeleteMapping("/eliminar/{id}")
-  public String eliminarRol(@PathVariable int rolId) {
-	      rolManagerService.eliminar(rolId);
+  public String eliminarRol(@PathVariable int id) {
+	      rolManagerService.eliminar(id);
 	  return "Rol eliminado";
   }
 }

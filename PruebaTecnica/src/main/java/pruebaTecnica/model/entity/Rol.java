@@ -25,17 +25,17 @@ public class Rol implements Serializable {
  @Id
  @GeneratedValue( strategy = GenerationType.SEQUENCE,generator ="ROL_S")
  @SequenceGenerator(sequenceName = "cd_rol_sec",allocationSize = 1,name = "ROL_S")
- @Column (name="rol_id")
+ @Column (name="ROL_ID")
  private int rolId;
  
- @Column(name="nombre_id")
+ @Column(name="NOMBRE_ROL")
  private  String nombreRol;
  
- @Column(name="fecha_creacion")
+ @Column(name="FECHA_CREACION")
  @Temporal(TemporalType.TIMESTAMP)
  private  Date fechaCreacion; 
  
- @Column(name="fecha_ultima_modificacion")
+ @Column(name="FECHA_ULTIMA_MODIFICACION")
  @Temporal (TemporalType.TIMESTAMP)
  private Date fechaUltimaModificacion;
 
@@ -47,12 +47,12 @@ public void setRolId(int rolId) {
 	this.rolId = rolId;
 }
 
-public String getNombre_rol() {
+public String getNombreRol() {
 	return nombreRol;
 }
 
-public void setNombre_rol(String nombre_rol) {
-	this.nombreRol = nombre_rol;
+public void setNombreRol(String nombreRol) {
+	this.nombreRol = nombreRol;
 }
 
 public Date getFechaCreacion() {
@@ -70,10 +70,8 @@ public Date getFechaUltimaModificacion() {
 public void setFechaUltimaModificacion(Date fechaUltimaModificacion) {
 	this.fechaUltimaModificacion = fechaUltimaModificacion;
 }
-
-public static long getSerialversionuid() {
-	return serialVersionUID;
-}
+ 
+ 
 
  
 }

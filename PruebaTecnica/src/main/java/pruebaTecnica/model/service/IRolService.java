@@ -11,11 +11,13 @@ public interface IRolService {
 	
     public Rol insertar(Rol rol);
    
-	public Rol actualizar(Rol rol, int rolId);
+	public Rol actualizar(Rol rol);
 
 	public List<Rol> listaColaboradores();
 
 	void eliminar(int rol_id);
+
+
 	
 	
 	

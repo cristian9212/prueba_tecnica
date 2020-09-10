@@ -6,16 +6,14 @@ import pruebaTecnica.model.entity.Rol;
 
 public interface IrolManagerService {
 	
-	public Rol findById (int rolId);
+	public Rol findById (int id);
 
-	public Rol insertar(Rol rol);
+	public String insertar(Rol rol);
 
-	 public Rol actualizar(Rol rol, int rolId);
+	 public Rol actualizar(Rol rol );
 
 	public List<Rol> listaColaboradores();
 
 	void eliminar(int rol_id);
-	
-	
-  
+
 }

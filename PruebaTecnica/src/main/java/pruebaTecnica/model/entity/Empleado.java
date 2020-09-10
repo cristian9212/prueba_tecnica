@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -22,36 +23,38 @@ public class Empleado  implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
    @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY) 
+   @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "EMPLEADO_S") 
+   @SequenceGenerator(sequenceName = "cd_empleado_sec",allocationSize = 1, name= "EMPLEADO_S")
    
-   @Column(name="empleado_id")
+   @Column(name="EMPLEADO_ID")
    private int empleadoId;
    
-   private String nombre;
    
-   private String apellido;
+   private String NOMBRE;
    
-   @Column(name="fecha_nacimento")
+   private String APELLIDO;
+   
+   @Column(name="FECHA_NACIMIENTO")
    @Temporal(TemporalType.TIMESTAMP)
-   private Date fechaNaciemto;
+   private Date FECHANACIMIENTO;
    
-   private  int cedula;
+   private  int CEDULA;
    
-   private String correo;
+   private String CORREO;
    
-   private String direccion;
+   private String DIRECCION;
    
-   private String password;
+   private String PASSWORD;
    
-   @Column(name="fecha_creacion")
+   @Column(name="FECHA_CREACION")
    @Temporal(TemporalType.TIMESTAMP)
    private Date fechaCreacion;
    
-   @Column(name="fecha_ultima_modificacion")
+   @Column(name="FECHA_ULTIMA_MODIFICACION")
    @Temporal(TemporalType.TIMESTAMP)
    private Date fechaUltimaModificacion;
    
-   @Column(name="rol_id")
+   @Column(name="ROL_ID")
    private int rolId;
 
 public int getEmpleado_id() {
@@ -63,59 +66,59 @@ public void setEmpleado_id(int empleado_id) {
 }
 
 public String getNombre() {
-	return nombre;
+	return NOMBRE;
 }
 
 public void setNombre(String nombre) {
-	this.nombre = nombre;
+	this.NOMBRE = nombre;
 }
 
 public String getApellido() {
-	return apellido;
+	return APELLIDO;
 }
 
 public void setApellido(String apellido) {
-	this.apellido = apellido;
+	this.APELLIDO = apellido;
 }
 
 public Date getFechaNaciemto() {
-	return fechaNaciemto;
+	return FECHANACIMIENTO;
 }
 
 public void setFechaNaciemto(Date fechaNaciemto) {
-	this.fechaNaciemto = fechaNaciemto;
+	this.FECHANACIMIENTO = fechaNaciemto;
 }
 
 public int getCedula() {
-	return cedula;
+	return CEDULA;
 }
 
 public void setCedula(int cedula) {
-	this.cedula = cedula;
+	this.CEDULA = cedula;
 }
 
 public String getCorreo() {
-	return correo;
+	return CORREO;
 }
 
 public void setCorreo(String correo) {
-	this.correo = correo;
+	this.CORREO = correo;
 }
 
 public String getDireccion() {
-	return direccion;
+	return DIRECCION;
 }
 
 public void setDireccion(String direccion) {
-	this.direccion = direccion;
+	this.DIRECCION = direccion;
 }
 
 public String getPassword() {
-	return password;
+	return PASSWORD;
 }
 
 public void setPassword(String password) {
-	this.password = password;
+	this.PASSWORD = password;
 }
 
 public Date getFechaCreacion() {
